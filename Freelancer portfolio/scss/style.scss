@@ -1,0 +1,124 @@
+//****************************************ШРИФТЫ************************************************************
+//Подключение шрифтов//
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+//Шрифт по умолчанию
+$fontfamily:"Poppins";
+
+//Цвет шрифта по умолчанию
+$color: #000;
+
+//Размер шрифта по умолчанию
+$fontsize: 14px;
+
+//Ширина шрифта по умолчанию
+$fontweight: 400;
+//****************************************ПЕРЕМЕННЫЕ********************************************************
+$minwidth:320px;
+//***************************************ПОДКЛЮЧЕНИЕ ФАЙЛОВ*************************************************
+//Обнуляющий стиль
+@import "null_style.scss";
+
+//Миксины
+@import "mixins.scss";
+
+//Шапка
+@import "header.scss";
+
+//Подвал
+@import "footer.scss";
+//****************************************ОБЩИЕ ПАРАМЕТРЫ***************************************************
+.title {
+	font-weight: 600;
+	font-size: 34px;
+	line-height: 51px;
+	color: #000;
+}
+//****************************************ОБОЛОЧКА**********************************************************
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+}
+//****************************************ОСНОВНАЯ СЕТКА****************************************************
+.container {
+	max-width: 1230px;
+	padding: 0px 30px;
+	margin: 0 auto;
+}
+//****************************************ОСНОВНОЙ БЛОК*****************************************************
+/**************************Services**************************/ 
+.services {
+	padding: 90px 0px;
+	&__row {
+		@include flexbox();
+		column-gap: 30px;
+		row-gap: 60px;
+		flex-wrap: wrap;
+	}
+}
+
+.service {
+	&__card {
+		flex: 1 1 0;
+		min-width: 315px;
+	}
+
+	&__img {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 36px;
+		text-transform: uppercase;
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__text {
+		line-height: 2;
+	}
+}
+
+/**************************Portfolio**************************/ 
+.portfolio {
+	background-color: #F1F1F1;
+	padding: 90px 0px;
+	&__title {
+		text-align: center;
+		margin: 0px 0px 70px 0px;
+	}
+}
+
+.project {
+	text-align: center;
+	margin: 0px 0px 90px 0px;
+
+	&:last-child {
+		margin: 0px;
+	}
+
+	&__img {
+		margin: 0px 0px 40px 0px;
+	}
+
+	&__img img {
+		max-width: 100%;
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 27px;
+		text-decoration-line: underline;
+	}
+
+	&__link {
+		color: #070707;
+	}
+} 
+
+//***************************************ПОДКЛЮЧЕНИЕ АДАПТИВА*************************************************
+@import "media.scss";
+
+// ***************************************ПОДКЛЮЧЕНИЕ ЕДИНИЦ ИЗМЕРЕНИЯ*************************************************
+// @import "units.scss";
